@@ -4,24 +4,102 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour of Dom</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <style>
+     .fruits-container li {
+        color: tomato;
+      }
+      #full-form-of-dom {
+        color: blueviolet;
+      }
+      .Important-places{
+        color: brown;
+      }
+    </style>
   </head>
   <body>
     <header>
       <h1>Welcome To My Dom</h1>
-      <link rel="stylesheet" href="/style/style.css" />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim possimus
+        amet autem fuga modi exercitationem ducimus in nihil architecto quo
+        officia inventore atque accusamus nobis nemo voluptates, unde
+        consequatur illo tempora porro! Provident maiores illo error quo
+        perspiciatis voluptas minima eum, cumque consequatur atque omnis iste
+        dolores autem ipsa nihil.
+      </p>
     </header>
     <main>
-      <h2>My Awesome Dom</h2>
-      <h4>Dom mean Document Object Model</h4>
+      <h>My Awesome Dom</h1>
+      <h4 id="full-form-of-dom">Dom mean Document Object Model</h4>
       <ul>
         <li>Document</li>
         <li>Object</li>
         <li>Model</li>
       </ul>
+      <section class="fruits-container">
+        <h1 id="fruits-title" class="some-class random-class bg-blueviolet">My Fruits</h1>
+        <ul >
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Jackfruit</li>
+          <li>Mango</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+          <li class="Important-places">Bandarban</li>
+          <li class="Important-places">Khagrachori</li>
+          <li class="Important-places">Sajek Valley</li>
+          <li>Cox's Bazar</li>
+        </ul>
+      </section>
     </main>
     <script src="/javaScript/dom.js"></script>
+    <script src="./javaScript/styleIn.js"></script>
     <script>
-      console.log("Adding Inside JS FIle");
+      // console.log("Adding Inside JS FIle");
+      // const student = {
+      //   name: "Sifat",
+      //   Id: 2024,
+      //   study: function (time) {
+      //     console.log(time, "Study kortese");
+      //   },
+      // };
+
+      const liCollection = document.getElementsByTagName("li");
+      // console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li.innerText);
+      }
+      
+      //Option- 1 : getElementsByTagname
+      const allHeadings = document.getElementsByTagName("h1");
+      for (const h1 of allHeadings) {
+        // console.log(h1.innerText);
+      }
+
+      //Option - 2 : getElementsByClassName
+      const Places = document.getElementsByClassName('Important-places');
+      for(const place of Places){
+        // console.log(place.innerText)
+
+      }
+
+      //Option - 3: getElementById
+      const fruitsTItle = document.getElementById('fruits-title');
+      fruitsTItle.innerText = "Fruits Title Changed by JS";
+
+      // Option - 4: querySelector
+
+      //Option - 5: querySelectorAll
+      const someLi = document.querySelectorAll('.fruits-container li');
+      // console.log (someLi);
+       for(const li of someLi){
+        // console.log(li.innerText);
+       }
+
     </script>
   </body>
 </html>
