@@ -1,3 +1,15 @@
 h1 {
   color: royalblue;
 }
+
+/* .red-bg {
+  background-color: red !important;
+} */
+
+.font-size {
+  font-size: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
